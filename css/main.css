@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background-color: rgb(191, 245, 245);
+    width: 100%;
+}
+
+#content {
+    overflow: auto;
+    height: 99%;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav {
+    background-color: rgb(77, 200, 221);
+    margin: 25px;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer {
+    background-color: rgb(77, 200, 221);
+    margin: 25px;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    display: inline;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+#feature {
+    background-color: azure;
+    margin: 1%;
+    text-align: center;
+    width: 95%;
+}
+
+#article_1 {
+    background-color: azure;
+    margin: 1%;
+    width: 31%;
+    float: left;
+    word-wrap: break-word;
+}
+
+#article_2 {
+    background-color: azure;
+    margin: 1%;
+    width: 31%;
+    float: left;
+    word-wrap: break-word;
+}
+
+#article_3 {
+    background-color: azure;
+    margin: 1%;
+    width: 31%;
+    float: left;
+    word-wrap: break-word;
+}
