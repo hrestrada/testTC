@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/main.css" type="text/css" rel="stylesheet" />
     <title>ThirdChannel Test Site</title>
-
+    
+    
+    
+  <style>
+  iframe{
+    width: 100%;
+    height:100%;
+    border: none;
+  }
+  </style>
+    
+    
+    
+    
   </head>
 
 
@@ -50,7 +63,7 @@
     
 
 <!--<a id="liveagent_button_online_57302000000Caax" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('57302000000Caax')"> -->
-  <!-- Online Chat Content -->Live Button -->
+  <!-- Online Chat Content  --Live Button -->
     <!--<!--</a><div id="liveagent_button_offline_57302000000Caax" style="display: none;"> -->
     <!-- Offline Chat Content Offline Button</div> -->
     
@@ -65,6 +78,22 @@ liveagent.showWhenOffline('57302000000Caax', document.getElementById('liveagent_
 <script type='text/javascript'>
 liveagent.init('https://d.la2-c1cs-ia5.salesforceliveagent.com/chat', '57202000000CaX5', '00D020000008qKZ');
 </script> -->
+    
+    
+    
+  <script type="text/javascript" src="path/to/prototype.js"></script>
+  <script type="application/javascript">
+    window.onmessage = function(e) {
+      console.log(e.data.hasOwnProperty("frameHeight"));
+      if (e.data.hasOwnProperty("frameHeight")) {
+        var chatFrame = document.getElementById("chatFrame");
+        chatFrame.style.height = e.data.frameHeight + 20 + "px";
+        chatFrame.style.width = e.data.frameWidth + 20 + "px";
+      }
+    };
+  </script>
+    
+    
     <iframe src="https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting"></iframe>
   </body>
 
