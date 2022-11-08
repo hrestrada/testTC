@@ -58,7 +58,7 @@
     
 
     
-<iframe  allowtransparency="true" frameborder="0" scrolling="no" id="tcIframe" src="getTCiFrame()"
+<iframe  allowtransparency="true" frameborder="0" scrolling="no" id="tcIframe" onload="getTCiFrame()" src="https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting"
         style="height:100%; background: none; border: 0px; float: none; left: 0px; margin: 0px; padding: 0px; position: absolute; right: 0px;  bottom: 0px; width: 100%;z-index:0; "></iframe>
 
 
@@ -74,7 +74,14 @@
   let frameURL = "https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting";
   newURL = frameURL + '?urlpath=' + tcIframe;
     return newURL;
-  }
+    
+    
+        function getTCiFrame(){
+        var urlPath = window.location.pathname;
+        var loc = "https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting" + '?urlpath=' + urlPath;
+        document.getElementById('tcIframe').setAttribute('src', loc);
+    }
+
   
 </script>
     
