@@ -69,12 +69,14 @@
     
           <script type="text/javascript">   
             
-            var varVisitorID   = setVisitorID();
+
     
         function getTCiFrame(){
         var urlPath = window.location.href;//pathname;
         var loc = "https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting" + '?urlpath=' + urlPath;
         document.getElementById('tcIframe').setAttribute('src', loc);
+          
+                      var varVisitorID   = setVisitorID();
     }
 
             
