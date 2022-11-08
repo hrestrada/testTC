@@ -58,23 +58,23 @@
     
 
     
-<iframe  allowtransparency="true" frameborder="0" scrolling="no" id="tcIframe" 
+<iframe  allowtransparency="true" frameborder="0" scrolling="no" id="tcIframe" src="getTCiFrame()"
         style="height:100%; background: none; border: 0px; float: none; left: 0px; margin: 0px; padding: 0px; position: absolute; right: 0px;  bottom: 0px; width: 100%;z-index:0; "></iframe>
 
+      <script type="text/javascript">
+  getTCiFrame() {
+  let tcIframe = window.location.pathname;
+  let frameURL = "https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting";
+  tcIframe = frameURL + '?urlpath=' + tcIframe;
+  }
   
+</script>
   
   
   
   </body>
     
     
-    
-    <script type="text/javascript">
-  let tcIframe = document.getElementById("tcIframe");
-  let frameURL = "https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting";
-  tcIframe.src = frameURL + '?urlpath=' + window.location.pathname;
-  
-</script>
     
 
 </html>
