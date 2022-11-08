@@ -70,7 +70,7 @@
           <script type="text/javascript">   
     
         function getTCiFrame(){
-        var urlPath = window.location.pathname;
+        var urlPath = window.location.href;//pathname;
         var loc = "https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting" + '?urlpath=' + urlPath;
         document.getElementById('tcIframe').setAttribute('src', loc);
     }
