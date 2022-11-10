@@ -12,7 +12,7 @@
   </head>
 
 
-  <body  onload="getTCiFrame()">
+  <body  onload="makeRequest1()">
 
     <div id="header">
       <img src="images/logocdw.jpeg" class="logo" alt="CDW Logo"/>
@@ -70,12 +70,26 @@
             
 
     
-        function getTCiFrame(){
-        var urlPath = window.location.href;//pathname;
-        var loc = "https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting" + '?urlpath=' + urlPath;
-        document.getElementById('tcIframe').setAttribute('src', loc);
-          
-
+  //      function getTCiFrame(){
+  //      var urlPath = window.location.href;//pathname;
+  //      var loc = "https://thirdchannel2022--apps--c.sandbox.vf.force.com/apex/TestOmniFlowRouting" + '?urlpath=' + urlPath;
+  //      document.getElementById('tcIframe').setAttribute('src', loc);
+    
+            
+            
+function makeRequest1() {       
+    fetch('https://thirdchannel2022--apps.sandbox.my.site.com/s/services/apexrest/TestOmniFlowRouting')
+        .then(response => response.json()).then( json => setData(json))
+        .catch(error => console.error(error))
+        .finally(() => {
+            console.log("Data received 1 --> ", data);
+            data = null;
+    });
+}
+            
+            
+            
+            
     }
 
             
