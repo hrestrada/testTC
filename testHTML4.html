@@ -78,13 +78,13 @@
             
             
 function makeRequest1() {       
-    fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/')
-        .then(response => response.json()).then( json => setData(json))
-        .catch(error => console.error(error))
-        .finally(() => {
-            console.log("Data received 1 --> ", data);
-            data = null;
-    });
+fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/')
+  .then((response) => {
+    return response.json();
+  })
+  .then((myJson) => {
+    console.log(myJson);
+  });
 }
             
             
