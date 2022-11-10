@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    
+    
     <link href="css/main.css" type="text/css" rel="stylesheet" />
     <title>ThirdChannel Test Site</title>
     
@@ -51,24 +55,14 @@
     </div>
     
 
-    
- 
-
-    
-
-    
-<!-- <iframe  allowtransparency="true" frameborder="0" scrolling="no" id="tcIframe"  
-        style="height:100%; background: none; border: 0px; float: none; left: 0px; margin: 0px; padding: 0px; position: absolute; right: 0px;  bottom: 0px; width: 100%;z-index:0; "></iframe>
-
--->
-  
-  
-  
-  </body>
-    
-          <script type="text/javascript">   
+    <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+    <script type="text/javascript">   
             
-
+        var varProductID   = '020806'; //Needs to be gather from the URL
+        var varVisitorID   = setVisitorID();
+        var varVisitorURL = window.location.href;
+        console.log('varVisitorID Value: ' + varVisitorID);
+        console.log('varVisitorURL Value: ' + varVisitorURL);
     
   //      function getTCiFrame(){
   //      var urlPath = window.location.href;//pathname;
@@ -76,18 +70,53 @@
   //      document.getElementById('tcIframe').setAttribute('src', loc);
     
       
-window.onload = function makeRequest1() {       
-    fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/')
-      .then((response) => {
-        return response.json();
-      })
-      .then((result) => {
-        console.log('DATA ==> ' + result);
-      });
-  }
+        window.onload = function makeRequest1() {       
+            fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/')
+              .then((response) => {
+                return response.json();
+              })
+              .then((result) => {
+                console.log('DATA ==> ' + result);
+              });
+         }
 
 
+        function setVisitorID () {
 
+            var myCookie = getCookie("apex__tcVisitorID");
+            //console.log('myCookie', myCookie);
+            if (myCookie == null) {
+        
+                expiry = new Date();
+                expiry.setTime(expiry.getTime()+(60 * 60 * 24 * 30 * 1000 )); 
+                //60 seconds to a minute, 60 minutes to an hour, 24 hours to a day, and 30 days. * 1000 Taken to milliseconds
+                var visitorID = CreateGuid();
+                document.cookie = "apex__tcVisitorID="+ visitorID +"; expires=" + expiry.toGMTString();
+                
+                return visitorID;
+            } else {
+                return myCookie;
+            }
+        }
+        
+      
+        function CreateGuid() {  
+        function _p8(s) {  
+            var p = (Math.random().toString(16)+"000000000").substr(2,8);  
+            return s ? "-" + p.substr(0,4) + "-" + p.substr(4,4) : p ;  
+        }  
+            return _p8() + _p8(true) + _p8(true) + _p8();  
+        } 
+    
+      
+        function getCookie(cookieName) {
+            let cookie = {};
+            document.cookie.split(';').forEach(function(el) {
+                let [key,value] = el.split('=');
+                cookie[key.trim()] = value;
+            })
+            return cookie[cookieName];
+        }
             
 
             
@@ -98,7 +127,13 @@ window.onload = function makeRequest1() {
             
 
   
-</script>
+    </script>
+  
+  
+  
+  </body>
+    
+
     
 
 </html>
