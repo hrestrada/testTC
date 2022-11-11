@@ -123,9 +123,7 @@
             );
         };
     
-      
-        window.onload = function makeRequest1() {
-            const params = {
+                  const params = {
             param1: "1",
             param2: "2"; 
             };
@@ -133,6 +131,9 @@
                 method: 'POST',
                 body: JSON.stringify( params )  
             };
+      
+        window.onload = function makeRequest1() {
+
             fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/', options)
               .then((response) => {
                 return response.json();
