@@ -131,33 +131,37 @@
               })
               .then((result) => {
                 console.log('DATA ==> ' + result);
+              
+                  if (!window.embedded_svc) {
+                      var s = document.createElement('script');
+                      s.setAttribute('src', 'https://thirdchannel2022--apps.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+                      s.onload = function() {            
+                                  var sLiveChatCSS = document.createElement('link');    
+                                  sLiveChatCSS.setAttribute("rel", "stylesheet");
+                                  sLiveChatCSS.setAttribute('type', 'text/css');
+                                  sLiveChatCSS.setAttribute('href', urlSite + '/resource/CHAT_CSS_CDW?id='+d);
+                                  sLiveChatCSS.onload = function() {
+                                      console.log('INIT 1');
+                                      initESW(null);
+                                  };
+                                  document.body.appendChild(sLiveChatCSS);         
+                              };
+                      // s.onload = function() {
+                      //     console.log('INIT 1');
+                      //     initESW(null);
+                      // };
+                      document.body.appendChild(s);
+                  } else {
+                      console.log('INIT 2');
+                      //initChat('https://service.force.com');   
+                      initESW('https://service.force.com');
+                  }
+              
+              
               });
           
           
-              if (!window.embedded_svc) {
-                  var s = document.createElement('script');
-                  s.setAttribute('src', 'https://thirdchannel2022--apps.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-                  s.onload = function() {            
-                              var sLiveChatCSS = document.createElement('link');    
-                              sLiveChatCSS.setAttribute("rel", "stylesheet");
-                              sLiveChatCSS.setAttribute('type', 'text/css');
-                              sLiveChatCSS.setAttribute('href', urlSite + '/resource/CHAT_CSS_CDW?id='+d);
-                              sLiveChatCSS.onload = function() {
-                                  console.log('INIT 1');
-                                  initESW(null);
-                              };
-                              document.body.appendChild(sLiveChatCSS);         
-                          };
-                  // s.onload = function() {
-                  //     console.log('INIT 1');
-                  //     initESW(null);
-                  // };
-                  document.body.appendChild(s);
-              } else {
-                  console.log('INIT 2');
-                  //initChat('https://service.force.com');   
-                  initESW('https://service.force.com');
-              }
+
           
           
           
