@@ -128,15 +128,15 @@
         window.onload = function makeRequest1() {
           
             const params = {
-            "param1": "1",
+            "from": varVisitorURL,
             "param2": "2"
             };
             const options = {
-                method: 'POST',
+                method: 'GET',
                 body: JSON.stringify( params )  
             };
 
-            fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat?from=' + varVisitorURL)
+            fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/', options)
               .then((response) => {
                 return response.json();
               })
