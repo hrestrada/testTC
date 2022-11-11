@@ -132,12 +132,11 @@
             "param2": "2"
             };
             const options = {
-                method: 'GET',
+                method: 'POST',
                 body: JSON.stringify( params )  
             };
 
-            //fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/', options)
-            get('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/', {"from": varVisitorURL, "param2": "2"})
+            fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcChat/', options)
               .then((response) => {
                 return response.json();
               })
