@@ -140,6 +140,7 @@
             "fromUrl": varVisitorURL,
             "userId": varVisitorID
             };
+            console.log('POST DATA ==> ' + params);
             const options = {
                 method: 'POST',
                 body: JSON.stringify( params )  
@@ -151,7 +152,7 @@
               })
               .then((result) => {
                 const obj = JSON.stringify(result);
-                console.log('DATA ==> ' + obj);
+                console.log('RETURN DATA ==> ' + obj);
                 var parseObj = JSON.parse(obj);
                 varProjectID = parseObj.projectId;
                 varSkill1 = parseObj.skill1;
