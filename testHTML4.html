@@ -58,7 +58,7 @@
     <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
     <script type="text/javascript">   
             
-        var varProductID   = '020806'; //Needs to be gather from the URL
+        //var varProductID   = '020806'; //Needs to be gather from the URL
         var varVisitorID   = setVisitorID();
         var varVisitorURL = window.location.href;
         console.log('varVisitorID Value: ' + varVisitorID);
@@ -93,7 +93,7 @@
             //{"label":"Email", "transcriptFields": ["Email__c"]},
             //{"label":"Company", "transcriptFields": ["Company__c"]},
            //{"label":"Project ID", "value": varProjectID, "transcriptFields": ["Project_ID__c"]},
-           {"label":"Product External ID", "value": varProductID,  "transcriptFields": ["Product_External_ID__c"]},
+           //{"label":"Product External ID", "value": varProductID,  "transcriptFields": ["Product_External_ID__c"]},
            {"label":"Visitor ID", "value": varVisitorID,  "transcriptFields": ["Visitor_ID__c"]},
             //{"label":"Visitor ID", "value": "{! JSENCODE(visitorId)}",  "transcriptFields": ["Visitor_ID__c"]},
             {"label":"VisitorURL", "value": varVisitorURL,  "transcriptFields": ["VisitorURL__c"]}
@@ -141,7 +141,8 @@
                 return response.json();
               })
               .then((result) => {
-                console.log('DATA ==> ' + result);
+                const obj = JSON.parse(result);
+                console.log('DATA ==> ' + obj);
               
                   if (!window.embedded_svc) {
                       var s = document.createElement('script');
