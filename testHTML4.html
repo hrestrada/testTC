@@ -140,9 +140,10 @@
                 return response.json();
               })
               .then((result) => {
-                const obj = JSON.parse(result);
+                const obj = JSON.stringify(result);
                 console.log('DATA ==> ' + obj);
-                varProjectID = obj.programId;
+                obj = JSON.parse(obj);
+                varProjectID = obj[0].programId;
                 console.log('varProjectID Value: ' + varProjectID);
               
                   if (!window.embedded_svc) {
