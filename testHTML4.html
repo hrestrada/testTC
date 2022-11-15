@@ -141,7 +141,7 @@
               .then((result) => {
                 const obj = JSON.stringify(result);
                 console.log('DATA ==> ' + obj);
-                const varProjectID = obj.programId;
+                const varProjectID = obj[0].programId;
                 console.log('varProjectID Value: ' + varProjectID);
               
                   if (!window.embedded_svc) {
