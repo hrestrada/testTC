@@ -59,7 +59,8 @@
     <script type="text/javascript">   
             
         //var varProductID   = '020806'; //Needs to be gather from the URL
-        var varVisitorID   = setVisitorID();
+        var varProjectID = '';
+        var varVisitorID = setVisitorID();
         var varVisitorURL = window.location.href;
         console.log('varVisitorID Value: ' + varVisitorID);
         console.log('varVisitorURL Value: ' + varVisitorURL);
@@ -141,7 +142,7 @@
               .then((result) => {
                 const obj = JSON.stringify(result);
                 console.log('DATA ==> ' + obj);
-                const varProjectID = obj[0].programId;
+                varProjectID = obj[0].programId;
                 console.log('varProjectID Value: ' + varProjectID);
               
                   if (!window.embedded_svc) {
