@@ -92,12 +92,10 @@
             //{"label":"Last Name", "transcriptFields": ["Last_Name__c"]},
             //{"label":"Email", "transcriptFields": ["Email__c"]},
             //{"label":"Company", "transcriptFields": ["Company__c"]},
-           //{"label":"Project ID", "value": varProjectID, "transcriptFields": ["Project_ID__c"]},
-           //{"label":"Product External ID", "value": varProductID,  "transcriptFields": ["Product_External_ID__c"]},
-           {"label":"Visitor ID", "value": varVisitorID,  "transcriptFields": ["Visitor_ID__c"]},
-            //{"label":"Visitor ID", "value": "{! JSENCODE(visitorId)}",  "transcriptFields": ["Visitor_ID__c"]},
+            //{"label":"Product External ID", "value": varProductID,  "transcriptFields": ["Product_External_ID__c"]},
+            {"label":"Project ID", "value": varProjectID, "transcriptFields": ["Project_ID__c"]},
+            {"label":"Visitor ID", "value": varVisitorID,  "transcriptFields": ["Visitor_ID__c"]},
             {"label":"VisitorURL", "value": varVisitorURL,  "transcriptFields": ["VisitorURL__c"]}
-            //{"label":"VisitorURL", "value": "{! JSENCODE($CurrentPage.URL)}",  "transcriptFields": ["VisitorURL__c"]}
             ];
             //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
             //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
@@ -143,6 +141,8 @@
               .then((result) => {
                 const obj = JSON.stringify(result);
                 console.log('DATA ==> ' + obj);
+                var varProjectID = obj.programId;
+                console.log('varProjectID Value: ' + varProjectID);
               
                   if (!window.embedded_svc) {
                       var s = document.createElement('script');
