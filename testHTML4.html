@@ -141,8 +141,8 @@
                 return response.json();
               })
               .then((result) => {
-                //const obj = JSON.parse(result);
-                console.log('DATA ==> ' + result);
+                const obj = JSON.stringify(result);
+                console.log('DATA ==> ' + obj);
               
                   if (!window.embedded_svc) {
                       var s = document.createElement('script');
