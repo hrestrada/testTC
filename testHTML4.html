@@ -60,6 +60,16 @@
             
         //var varProductID   = '020806'; //Needs to be gather from the URL
         var varProjectID = '';
+        var varSkill1 = '';
+        var varSkill2 = '';
+        var varSkill3 = '';
+        var varSkill4 = '';
+        var varSkill5 = '';
+        var varSkill6 = '';
+        var varSkill7 = '';
+        var varSkill8 = '';
+        var varSkill9 = '';
+        var varSkill10 = '';
         var varVisitorID = setVisitorID();
         var varVisitorURL = window.location.href;
         console.log('varVisitorID Value: ' + varVisitorID);
@@ -144,6 +154,16 @@
                 console.log('DATA ==> ' + obj);
                 var parseObj = JSON.parse(obj);
                 varProjectID = parseObj.projectId;
+                varSkill1 = parseObj.skill1;
+                varSkill2 = parseObj.skill2;
+                varSkill3 = parseObj.skill3;
+                varSkill4 = parseObj.skill4;
+                varSkill5 = parseObj.skill5;
+                varSkill6 = parseObj.skill6;
+                varSkill7 = parseObj.skill7;
+                varSkill8 = parseObj.skill8;
+                varSkill9 = parseObj.skill9;
+                varSkill10 = parseObj.skill10;
                 console.log('varProjectID Value: ' + varProjectID);
               
                   if (!window.embedded_svc) {
