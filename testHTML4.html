@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    
-    
-    <link href="css/main.css" type="text/css" rel="stylesheet" />
-    <title>ThirdChannel Test Site</title>
-    
-    
- 
-    
-  </head>
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Sample HTML Code - NewsLetter Form</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-  <body>
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      color: white;
+      background-color: #f20000;
+    }
 
-    <div id="header">
-      <img src="images/logocdw.jpeg" class="logo" alt="CDW Logo"/>
-        <div id="nav">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Contact</a></li>
+    main {
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-            </ul>
-        </div>
-    </div>
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
 
-    <div id="content">
-        <div id="feature">
-          <p> Main Feature </p>
-            <div id="article_1">
-              <p id="p_article_1">Product 1</p>
-            </div>
-            <div id="article_2">
-              <p id="p_article_2">Product 2</p>
-            </div>
-            <div id="article_3">
-              <p id="p_article_3">Brand 1</p>
-            </div>
-        </div>
-    </div>
-
-    
+    .title {
+      padding: 1rem;
+      font-size: 1.75rem;
+    }
 
     
     
-    <div id="footer">
-        <p>ThirdChannel Test Site</p>
-    </div>
+    
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- intro section -->
+    <section class="intro">
+      <h1 class="title">CDW Chat Test Page</h1>
+      <p>Testing site for chat on an external site. Program: CDW</p>
+    </section>
+
+    
+  </main>
     
 
     <!-- ///// START BUTTON CODE ///// -->
