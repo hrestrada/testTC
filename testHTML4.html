@@ -79,11 +79,16 @@
         var varVisitorID = setVisitorID();
         var varVisitorURL = window.location.href;
         //UxUi Variables      
-        var minimizedText = 'Minimized'
         var prechatBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669829882000/CDWHeader?';
         var smallCompanyLogoImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833206000/AppleIcon36?';
         var avatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833224000/AppleIcon40?';
         var waitingStateBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669837564000/AppleBanner?';
+        var chatbotAvatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669838309000/AppleBlue36?';      
+        var disabledMinimizedText = 'Agent Unavailable';
+        var defaultMinimizedText = 'defaultMinimizedText';
+        var disabledMinimizedText = 'disabledMinimizedText';
+        var offlineSupportMinimizedText = 'offlineSupportMinimizedText';
+        var loadingText = 'loadingText';
         console.log('varVisitorID Value: ' + varVisitorID);
         console.log('varVisitorURL Value: ' + varVisitorURL);
       
@@ -95,11 +100,15 @@
             //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
          //Setting UXUI custom variables
             
-            embedded_svc.settings.disabledMinimizedText = minimizedText; //(Defaults to Agent Offline)
             embedded_svc.settings.prechatBackgroundImgURL = prechatBackgroundImgURL;
             embedded_svc.settings.smallCompanyLogoImgURL = smallCompanyLogoImgURL;
             embedded_svc.settings.avatarImgURL = avatarImgURL;
             embedded_svc.settings.waitingStateBackgroundImgURL = waitingStateBackgroundImgURL;
+            embedded_svc.settings.chatbotAvatarImgURL = chatbotAvatarImgURL;
+            embedded_svc.settings.defaultMinimizedText = defaultMinimizedText;
+            embedded_svc.settings.disabledMinimizedText = disabledMinimizedText;
+            embedded_svc.settings.offlineSupportMinimizedText = offlineSupportMinimizedText;
+            embedded_svc.settings.loadingText = loadingText;
 
             //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
             //embedded_svc.settings.storageDomain = 'yourdomain.com'; 
