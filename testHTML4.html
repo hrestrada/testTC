@@ -92,6 +92,7 @@
         var widgetWidth = '160px'
         var widgetHeight = '249px'
         var widgetFontSize = '12px';
+        var qualifiedChat = true;
         
         console.log('varVisitorID Value: ' + varVisitorID);
         console.log('varVisitorURL Value: ' + varVisitorURL);
@@ -119,7 +120,7 @@
          
          //Hide button if no agent is available
          
-         embedded_svc.settings.displayHelpButton = true;
+         embedded_svc.settings.displayHelpButton = qualifiedChat;
             
             
 
