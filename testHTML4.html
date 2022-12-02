@@ -228,7 +228,8 @@
                 varSkill8 = parseObj.skill8;
                 varSkill9 = parseObj.skill9;
                 varSkill10 = parseObj.skill10;
-                varSegment = parseObj.segment;
+                //varSegment = parseObj.segment;
+                varSegment = 'Test Segment';
                 varSegmentParam = parseObj.segmentParam;
                 //prechatBackgroundImgURL = parseObj.prechatBackgroundImgURL;
                 //smallCompanyLogoImgURL = parseObj.smallCompanyLogoImgURL;
@@ -273,8 +274,29 @@
               
               });
           
+              makeRequest2();
+          
          }
 
+      
+        function makeRequest2() {
+          
+            const params = {
+            "userSegment": varSegment,
+            "userId": varVisitorID
+            };
+            const options = {
+                method: 'POST',
+                body: JSON.stringify( params )  
+            };
+
+            fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcSegment/', options)
+              .then((response) => {
+                return response.json();
+              })
+          
+        }
+      
 
         function setVisitorID () {
 
