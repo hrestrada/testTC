@@ -84,33 +84,33 @@
         var varVisitorURL = window.location.href;
         var varSegment = '';
         var varSegmentParam = '';
-        //UxUi Variables      
-        //var prechatBackgroundImgURL = '';
-        //var smallCompanyLogoImgURL = '';
-        //var avatarImgURL = '';
-        //var waitingStateBackgroundImgURL = '';
-        //var chatbotAvatarImgURL = '';     
-        //var defaultMinimizedText = '';
-        //var disabledMinimizedText = '';
-        //var offlineSupportMinimizedText = '';
-        //var loadingText = '';
-        //var widgetWidth = '';
-        //var widgetHeight = '';
-        //var widgetFontSize = '';
-        //var qualifiedChat = 'true';
-        var prechatBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669829882000/CDWHeader?';
-        var smallCompanyLogoImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833206000/AppleIcon36?';
-        var avatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833224000/AppleIcon40?';
-        var waitingStateBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669837564000/AppleBanner?';
-        var chatbotAvatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669838309000/AppleBlue36?';      
-        var defaultMinimizedText = 'defaultMinimizedText';
-        var disabledMinimizedText = 'disabledMinimizedText';
-        var offlineSupportMinimizedText = 'offlineSupportMinimizedText';
-        var loadingText = 'loadingText';
-        var widgetWidth = '400px';
-        var widgetHeight = '622px';
-        var widgetFontSize = '12px';
+        UxUi Variables      
+        var prechatBackgroundImgURL = '';
+        var smallCompanyLogoImgURL = '';
+        var avatarImgURL = '';
+        var waitingStateBackgroundImgURL = '';
+        var chatbotAvatarImgURL = '';     
+        var defaultMinimizedText = '';
+        var disabledMinimizedText = '';
+        var offlineSupportMinimizedText = '';
+        var loadingText = '';
+        var widgetWidth = '';
+        var widgetHeight = '';
+        var widgetFontSize = '';
         var qualifiedChat = 'true';
+        //var prechatBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669829882000/CDWHeader?';
+        //var smallCompanyLogoImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833206000/AppleIcon36?';
+        //var avatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833224000/AppleIcon40?';
+        //var waitingStateBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669837564000/AppleBanner?';
+        //var chatbotAvatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669838309000/AppleBlue36?';      
+        //var defaultMinimizedText = 'defaultMinimizedText';
+        //var disabledMinimizedText = 'disabledMinimizedText';
+        //var offlineSupportMinimizedText = 'offlineSupportMinimizedText';
+        //var loadingText = 'loadingText';
+        //var widgetWidth = '400px';
+        //var widgetHeight = '622px';
+        //var widgetFontSize = '12px';
+        //var qualifiedChat = 'true';
         
         console.log('varVisitorID Value: ' + varVisitorID);
         console.log('varVisitorURL Value: ' + varVisitorURL);
@@ -120,7 +120,6 @@
            embedded_svc.settings.displayHelpButton = true; //Or false
            embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-            //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
          //Setting UXUI custom variables
             
             embedded_svc.settings.prechatBackgroundImgURL = prechatBackgroundImgURL;
@@ -140,9 +139,7 @@
          
          embedded_svc.settings.displayHelpButton = qualifiedChat;
             
-            
 
-            //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
             //embedded_svc.settings.storageDomain = 'yourdomain.com'; 
             //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
@@ -173,8 +170,7 @@
             {"label":"VisitorURL", "value": varVisitorURL,  "transcriptFields": ["VisitorURL__c"]}
             ];
             //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-            //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-           //embedded_svc.snippetSettingsFile.externalStyles = ['CLWCP__ChatStyle']; //Chat LWC AppExchange
+           embedded_svc.snippetSettingsFile.externalStyles = ['CLWCP__ChatStyle']; //Chat LWC AppExchange
 
            embedded_svc.settings.enabledFeatures = ['LiveAgent'];
            embedded_svc.settings.entryFeature = 'LiveAgent';
@@ -231,19 +227,19 @@
                 //varSegment = parseObj.segment;
                 varSegment = 'Test Segment';
                 varSegmentParam = parseObj.segmentParam;
-                //prechatBackgroundImgURL = parseObj.prechatBackgroundImgURL;
-                //smallCompanyLogoImgURL = parseObj.smallCompanyLogoImgURL;
-                //avatarImgURL = parseObj.avatarImgURL;
-                //waitingStateBackgroundImgURL = parseObj.waitingStateBackgroundImgURL;
-                //chatbotAvatarImgURL = parseObj.chatbotAvatarImgURL;     
-                //defaultMinimizedText = parseObj.defaultMinimizedText;
-                //disabledMinimizedText = parseObj.disabledMinimizedText;
-                //offlineSupportMinimizedText = parseObj.offlineSupportMinimizedText;
-                //loadingText = parseObj.loadingText;
-                //widgetWidth = parseObj.widgetWidth;
-                //widgetHeight = parseObj.widgetHeight;
-                //widgetFontSize = parseObj.widgetFontSize;
-                //qualifiedChat = parseObj.qualify;
+                prechatBackgroundImgURL = parseObj.prechatBackgroundImgURL;
+                smallCompanyLogoImgURL = parseObj.smallCompanyLogoImgURL;
+                avatarImgURL = parseObj.avatarImgURL;
+                waitingStateBackgroundImgURL = parseObj.waitingStateBackgroundImgURL;
+                chatbotAvatarImgURL = parseObj.chatbotAvatarImgURL;     
+                defaultMinimizedText = parseObj.defaultMinimizedText;
+                disabledMinimizedText = parseObj.disabledMinimizedText;
+                offlineSupportMinimizedText = parseObj.offlineSupportMinimizedText;
+                loadingText = parseObj.loadingText;
+                widgetWidth = parseObj.widgetWidth;
+                widgetHeight = parseObj.widgetHeight;
+                widgetFontSize = parseObj.widgetFontSize;
+                qualifiedChat = parseObj.qualify;
                 console.log('varProjectID Value: ' + varProjectID);
               
                   if (!window.embedded_svc) {
