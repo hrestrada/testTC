@@ -115,8 +115,8 @@
         
         console.log('varVisitorID Value: ' + varVisitorID);
         console.log('varVisitorURL Value: ' + varVisitorURL);
-      qualifiedBolean = false;
-      embedded_svc.settings.displayHelpButton = qualifiedChat;
+      
+      embedded_svc.settings.displayHelpButton = false;
       
       
        var initESW = function(gslbBaseURL) {
@@ -242,15 +242,16 @@
                 widgetWidth = parseObj.widgetWidth;
                 widgetHeight = parseObj.widgetHeight;
                 widgetFontSize = parseObj.widgetFontSize;
-               // if(parseObj.qualify == "true"){
-                 // qualifiedBolean = true;
+               if(parseObj.qualify == "true"){
+                  qualifiedBolean = true;
                 //  embedded_svc.settings.displayHelpButton = qualifiedChat;
-                //} else if(parseObj.qualify == "false") {
-                //  qualifiedBolean = false;
+                } else if(parseObj.qualify == "false") {
+                  qualifiedBolean = false;
                 //  embedded_svc.settings.displayHelpButton = qualifiedChat;
-                //}
-                qualifiedBolean = false;
-                embedded_svc.settings.displayHelpButton = qualifiedChat;
+                }
+              console.log('qualifiedBolean Value: ' + qualifiedBolean);
+                //qualifiedBolean = false;
+                //embedded_svc.settings.displayHelpButton = qualifiedChat;
                 console.log('varProjectID Value: ' + varProjectID);
               
                   if (!window.embedded_svc) {
