@@ -279,6 +279,7 @@
               if (varSegmentParam !== '') {
                 var varTime = varSegmentParam * 1000;
                 setTimeout(makeRequest2, varTime);
+                alert('timer fired');
               }
 
           
@@ -286,7 +287,7 @@
 
       
         function makeRequest2() {
-          
+            console.log('api 1');
             const params = {
             "userSegment": varSegment,
             "userId": varVisitorID
@@ -300,7 +301,7 @@
               //.then((response) => {
               //  return response.json();
               //})
-          
+                      console.log('api 2');
         }
       
 
