@@ -240,14 +240,15 @@
                 widgetWidth = parseObj.widgetWidth;
                 widgetHeight = parseObj.widgetHeight;
                 widgetFontSize = parseObj.widgetFontSize;
-                if(parseObj.qualify == "true"){
-                  qualifiedBolean = true;
-                  embedded_svc.settings.displayHelpButton = qualifiedChat;
-                } else if(parseObj.qualify == "false") {
-                  qualifiedBolean = false;
-                  embedded_svc.settings.displayHelpButton = qualifiedChat;
-                }
-                //qualifiedChat = parseObj.qualify;
+               // if(parseObj.qualify == "true"){
+                 // qualifiedBolean = true;
+                //  embedded_svc.settings.displayHelpButton = qualifiedChat;
+                //} else if(parseObj.qualify == "false") {
+                //  qualifiedBolean = false;
+                //  embedded_svc.settings.displayHelpButton = qualifiedChat;
+                //}
+                qualifiedBolean = false;
+                embedded_svc.settings.displayHelpButton = qualifiedChat;
                 console.log('varProjectID Value: ' + varProjectID);
               
                   if (!window.embedded_svc) {
