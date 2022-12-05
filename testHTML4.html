@@ -97,7 +97,8 @@
         var widgetWidth = '';
         var widgetHeight = '';
         var widgetFontSize = '';
-        var qualifiedChat = 'true';
+        var qualifiedChat = '';
+        var qualifiedBolean = true;
         //var prechatBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669829882000/CDWHeader?';
         //var smallCompanyLogoImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833206000/AppleIcon36?';
         //var avatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833224000/AppleIcon40?';
@@ -137,7 +138,7 @@
          
          //Hide button if no agent is available
          
-         embedded_svc.settings.displayHelpButton = qualifiedChat;
+         
             
 
             //embedded_svc.settings.storageDomain = 'yourdomain.com'; 
@@ -239,6 +240,13 @@
                 widgetWidth = parseObj.widgetWidth;
                 widgetHeight = parseObj.widgetHeight;
                 widgetFontSize = parseObj.widgetFontSize;
+                if(parseObj.qualify == "true"){
+                  qualifiedBolean = true;
+                  embedded_svc.settings.displayHelpButton = qualifiedChat;
+                } else if(parseObj.qualify == "false") {
+                  qualifiedBolean = false;
+                  embedded_svc.settings.displayHelpButton = qualifiedChat;
+                }
                 //qualifiedChat = parseObj.qualify;
                 console.log('varProjectID Value: ' + varProjectID);
               
