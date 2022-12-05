@@ -226,8 +226,8 @@
                 varSkill8 = parseObj.skill8;
                 varSkill9 = parseObj.skill9;
                 varSkill10 = parseObj.skill10;
-                //varSegment = parseObj.segment;
-                varSegment = 'Test Segment';
+                varSegment = parseObj.segment;
+                //varSegment = 'Test Segment';
                 varSegmentParam = parseObj.segmentParam;
                 prechatBackgroundImgURL = parseObj.prechatBackgroundImgURL;
                 smallCompanyLogoImgURL = parseObj.smallCompanyLogoImgURL;
@@ -276,10 +276,11 @@
               
               });
           
-              //if (varSegmentParam !== '') {
-                //var varTime = varSegmentParam * 1000;
-              //}
-              //setTimeout(makeRequest2, varTime);
+              if (varSegmentParam !== '') {
+                var varTime = varSegmentParam * 1000;
+                setTimeout(makeRequest2, varTime);
+              }
+
           
          }
 
