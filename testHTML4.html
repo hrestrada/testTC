@@ -98,7 +98,6 @@
         var widgetHeight = '';
         var widgetFontSize = '';
         var qualifiedChat = '';
-        var qualifiedBolean = true;
         //var prechatBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669829882000/CDWHeader?';
         //var smallCompanyLogoImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833206000/AppleIcon36?';
         //var avatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833224000/AppleIcon40?';
@@ -116,7 +115,7 @@
         console.log('varVisitorID Value: ' + varVisitorID);
         console.log('varVisitorURL Value: ' + varVisitorURL);
       
-      embedded_svc.settings.displayHelpButton = false;
+      //embedded_svc.settings.displayHelpButton = false;
       
       
        var initESW = function(gslbBaseURL) {
@@ -243,13 +242,11 @@
                 widgetHeight = parseObj.widgetHeight;
                 widgetFontSize = parseObj.widgetFontSize;
                if(parseObj.qualify == "true"){
-                  qualifiedBolean = true;
-                //  embedded_svc.settings.displayHelpButton = qualifiedChat;
+                  embedded_svc.settings.displayHelpButton = true;
                 } else if(parseObj.qualify == "false") {
-                  qualifiedBolean = false;
-                //  embedded_svc.settings.displayHelpButton = qualifiedChat;
+                  embedded_svc.settings.displayHelpButton = false;
                 }
-              console.log('qualifiedBolean Value: ' + qualifiedBolean);
+               console.log('qualifiedBolean Value: ' + qualifiedBolean);
                 //qualifiedBolean = false;
                 //embedded_svc.settings.displayHelpButton = qualifiedChat;
                 console.log('varProjectID Value: ' + varProjectID);
