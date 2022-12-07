@@ -250,7 +250,7 @@
               if (varSegmentParam !== '') {
                 var varTime = varSegmentParam * 1000;
                 setTimeout(makeRequest2, varTime);
-                alert('timer fired-- ' + varTime);
+                //alert('timer fired-- ' + varTime);
               }
               
                   if (!window.embedded_svc) {
@@ -288,7 +288,7 @@
 
       
         function makeRequest2() {
-            console.log('api 1');
+            console.log('API 1');
             const params = {
             "userSegment": varSegment, 
             "userUrl": varVisitorURL, 
@@ -303,7 +303,7 @@
               //.then((response) => {
               //  return response.json();
               //})
-                      console.log('api 2');
+              console.log('API 2');
         }
       
 
