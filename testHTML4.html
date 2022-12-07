@@ -290,8 +290,9 @@
         function makeRequest2() {
             console.log('api 1');
             const params = {
-            "userSegment": varSegment,
-            "userId": varVisitorID
+            "userSegment": varSegment, 
+            "userUrl": varVisitorURL, 
+            "userId": varVisitorID 
             };
             const options = {
                 method: 'POST',
