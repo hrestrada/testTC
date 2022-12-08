@@ -60,11 +60,11 @@
   </main>
 
 
-    <!-- ///// START BUTTON CODE ///// -->
-
+     <!-- ///// START BUTTON CODE ///// -->
+    
     <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
     <script type="text/javascript">   
-
+            
         //var varProductID   = '020806'; //Needs to be gather from the URL
         var varProjectID = '';
         var varSkill1 = '';
@@ -79,32 +79,48 @@
         var varSkill10 = '';
         var varVisitorID = setVisitorID();
         var varVisitorURL = window.location.href;
+        var varSegment = '';
+        var varSegmentParam = '';
         //UxUi Variables      
-        var prechatBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669829882000/CDWHeader?';
-        var smallCompanyLogoImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833206000/AppleIcon36?';
-        var avatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833224000/AppleIcon40?';
-        var waitingStateBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669837564000/AppleBanner?';
-        var chatbotAvatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669838309000/AppleBlue36?';      
-        var defaultMinimizedText = 'defaultMinimizedText';
-        var disabledMinimizedText = 'disabledMinimizedText';
-        var offlineSupportMinimizedText = 'offlineSupportMinimizedText';
-        var loadingText = 'loadingText';
-        var widgetWidth = '160px'
-        var widgetHeight = '249px'
-        var widgetFontSize = '12px';
-        var qualifiedChat = true;
-
+        var prechatBackgroundImgURL = '';
+        var smallCompanyLogoImgURL = '';
+        var avatarImgURL = '';
+        var waitingStateBackgroundImgURL = '';
+        var chatbotAvatarImgURL = '';     
+        var defaultMinimizedText = '';
+        var disabledMinimizedText = '';
+        var offlineSupportMinimizedText = '';
+        var loadingText = '';
+        var widgetWidth = '';
+        var widgetHeight = '';
+        var widgetFontSize = '';
+        var qualifiedChat = '';
+        //var prechatBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669829882000/CDWHeader?';
+        //var smallCompanyLogoImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833206000/AppleIcon36?';
+        //var avatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669833224000/AppleIcon40?';
+        //var waitingStateBackgroundImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669837564000/AppleBanner?';
+        //var chatbotAvatarImgURL = 'https://thirdchannel2022--apps--c.sandbox.vf.force.com/resource/1669838309000/AppleBlue36?';      
+        //var defaultMinimizedText = 'defaultMinimizedText';
+        //var disabledMinimizedText = 'disabledMinimizedText';
+        //var offlineSupportMinimizedText = 'offlineSupportMinimizedText';
+        //var loadingText = 'loadingText';
+        //var widgetWidth = '400px';
+        //var widgetHeight = '622px';
+        //var widgetFontSize = '12px';
+        var qualifiedChat = "false";
+        
         console.log('varVisitorID Value: ' + varVisitorID);
         console.log('varVisitorURL Value: ' + varVisitorURL);
-
-
+      
+      //embedded_svc.settings.displayHelpButton = false;
+      
+      
        var initESW = function(gslbBaseURL) {
-           embedded_svc.settings.displayHelpButton = true; //Or false
+           //embedded_svc.settings.displayHelpButton = qualifiedChat; //Or false
            embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-            //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
          //Setting UXUI custom variables
-
+            
             embedded_svc.settings.prechatBackgroundImgURL = prechatBackgroundImgURL;
             embedded_svc.settings.smallCompanyLogoImgURL = smallCompanyLogoImgURL;
             embedded_svc.settings.avatarImgURL = avatarImgURL;
@@ -117,14 +133,12 @@
             embedded_svc.settings.widgetWidth = widgetWidth;
             embedded_svc.settings.widgetHeight = widgetHeight;
             embedded_svc.settings.widgetFontSize = widgetFontSize;
-
+         
          //Hide button if no agent is available
+         
+         
+            
 
-         embedded_svc.settings.displayHelpButton = qualifiedChat;
-
-
-
-            //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
             //embedded_svc.settings.storageDomain = 'yourdomain.com'; 
             //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
@@ -155,7 +169,6 @@
             {"label":"VisitorURL", "value": varVisitorURL,  "transcriptFields": ["VisitorURL__c"]}
             ];
             //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-            //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
            embedded_svc.snippetSettingsFile.externalStyles = ['CLWCP__ChatStyle']; //Chat LWC AppExchange
 
            embedded_svc.settings.enabledFeatures = ['LiveAgent'];
@@ -173,15 +186,15 @@
                     buttonId: '57302000000Caax',
                     baseLiveAgentURL: 'https://d.la2-c1cs-ia5.salesforceliveagent.com/chat',
                     eswLiveAgentDevName: 'IT_Pro_Agents',
-                    isOfflineSupportEnabled: false
+                    isOfflineSupportEnabled: true
                 }
             );
         };
+    
 
-
-
+      
         window.onload = function makeRequest1() {
-
+          
             const params = {
             "fromUrl": varVisitorURL,
             "userId": varVisitorID
@@ -210,8 +223,33 @@
                 varSkill8 = parseObj.skill8;
                 varSkill9 = parseObj.skill9;
                 varSkill10 = parseObj.skill10;
+                varSegment = parseObj.segment;
+                //varSegment = 'Test Segment';
+                varSegmentParam = parseObj.segmentParam;
+                prechatBackgroundImgURL = parseObj.prechatBackgroundImgURL;
+                smallCompanyLogoImgURL = parseObj.smallCompanyLogoImgURL;
+                avatarImgURL = parseObj.avatarImgURL;
+                waitingStateBackgroundImgURL = parseObj.waitingStateBackgroundImgURL;
+                chatbotAvatarImgURL = parseObj.chatbotAvatarImgURL;     
+                defaultMinimizedText = parseObj.defaultMinimizedText;
+                disabledMinimizedText = parseObj.disabledMinimizedText;
+                offlineSupportMinimizedText = parseObj.offlineSupportMinimizedText;
+                loadingText = parseObj.loadingText;
+                widgetWidth = parseObj.widgetWidth;
+                widgetHeight = parseObj.widgetHeight;
+                widgetFontSize = parseObj.widgetFontSize;
+               if(parseObj.qualify == "true"){
+                  embedded_svc.settings.displayHelpButton = true;
+                } else if(parseObj.qualify == "false") {
+                  embedded_svc.settings.displayHelpButton = false;
+                }
                 console.log('varProjectID Value: ' + varProjectID);
-
+              if (varSegmentParam !== '') {
+                var varTime = varSegmentParam * 1000;
+                setTimeout(makeRequest2, varTime);
+                //alert('timer fired-- ' + varTime);
+              }
+              
                   if (!window.embedded_svc) {
                       var s = document.createElement('script');
                       s.setAttribute('src', 'https://thirdchannel2022--apps.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
@@ -236,33 +274,56 @@
                       //initChat('https://service.force.com');   
                       initESW('https://service.force.com');
                   }
-
-
+              
+              
               });
+          
 
+
+          
          }
 
+      
+        function makeRequest2() {
+            console.log('API 1');
+            const params = {
+            "userSegment": varSegment, 
+            "userUrl": varVisitorURL, 
+            "userId": varVisitorID 
+            };
+            const options = {
+                method: 'POST',
+                body: JSON.stringify( params )  
+            };
+
+            fetch('https://thirdchannel2022--apps.sandbox.my.site.com/services/apexrest/TcSegment/', options)
+              //.then((response) => {
+              //  return response.json();
+              //})
+              console.log('API 2');
+        }
+      
 
         function setVisitorID () {
 
             var myCookie = getCookie("apex__tcVisitorID");
             //console.log('myCookie', myCookie);
             if (myCookie == null) {
-
+        
                 expiry = new Date(2147483647 * 1000);
                 //expiry = new Date();
                 //expiry.setTime(expiry.getTime()+(60 * 60 * 24 * 30 * 1000 )); 
                 //60 seconds to a minute, 60 minutes to an hour, 24 hours to a day, and 30 days. * 1000 Taken to milliseconds
                 var visitorID = CreateGuid();
                 document.cookie = "apex__tcVisitorID="+ visitorID + "; SameSite=None; Secure; expires=" + expiry.toUTCString();
-
+                
                 return visitorID;
             } else {
                 return myCookie;
             }
         }
-
-
+        
+      
         function CreateGuid() {  
         function _p8(s) {  
             var p = (Math.random().toString(16)+"000000000").substr(2,8);  
@@ -270,8 +331,8 @@
         }  
             return _p8() + _p8(true) + _p8(true) + _p8();  
         } 
-
-
+    
+      
         function getCookie(cookieName) {
             let cookie = {};
             document.cookie.split(';').forEach(function(el) {
@@ -280,19 +341,19 @@
             })
             return cookie[cookieName];
         }
-
-
+            
+  
     </script>
-
-
+  
+  
     <!-- ///// END BUTTON CODE ///// -->
-
-
-
-
+    
+    
+    
+  
   </body>
+    
 
-
-
+    
 
 </html>
