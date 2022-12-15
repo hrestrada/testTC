@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Sample HTML Code - NewsLetter Form</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      color: white;
+      background-color: #f20000;
+    }
+
+    main {
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      padding: 1rem;
+      font-size: 1.75rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- intro section -->
+    <section class="intro">
+      <h1 class="title">CDW Chat Test Page</h1>
+      <p>Testing site for chat on an external site. Program: CDW</p>
+      <p>Go to a <a href="testHTML4/computers.html">Computers</a> page</p>
+      <p>Go to a <a href="testHTML4/servers.html">Servers</a> page</p>
+      <p>Go to a <a href="testHTML4/category.html">Category</a> page</p>
+      <p>Go to a <a href="testHTML4/termsofservice.html">Terms of Services</a> page</p>
+      <p>Go to a <a href="testHTML4/apple.html">Apple Brand</a> page</p>
+    </section>
+
+
+  </main>
+
+
+  <!-- ///// START BUTTON CODE ///// -->
+
+  <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+  <script type="text/javascript" src="/js/testHTML4.min.js"></script>
+  <script type="text/javascript">
+    window.onload = function (e) {
+      SFChatJS.init({
+        siteUrl: "https://thirdchannel2022--apps.sandbox.my.site.com",
+        instanceUrl: "https://thirdchannel2022--apps.sandbox.my.salesforce.com",
+        baseLiveAgentContentURL: 'https://c.la2-c1cs-ia5.salesforceliveagent.com/content',
+        deploymentId: '57202000000CaX5',
+        buttonId: '57302000000Caax',
+        baseLiveAgentURL: 'https://d.la2-c1cs-ia5.salesforceliveagent.com/chat',
+        eswLiveAgentDevName: 'IT_Pro_Agents',
+        companyId: "00D020000008qKZ",
+      });
+      SFChatJS.start();
+    }
+  </script>
+
+  <!-- ///// END BUTTON CODE ///// -->
+
+
+
+
+</body>
+
+
+
+
+</html>
