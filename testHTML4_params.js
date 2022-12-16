@@ -44,4 +44,4 @@ var SFChatParamJS = SFChatParamJS || (function () {
     console.log('varVisitorID Value: ' + varVisitorID);
     console.log('varVisitorURL Value: ' + varVisitorURL);
 
-}
+}());
