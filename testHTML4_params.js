@@ -2,7 +2,7 @@
 
     
     //CDWneedleParam.txt
-        var needleParam = needleParam || {};
+        var needleParam = needleParam || (function () {
         (function(NP) {
      /*   try {
             (function(id, loader) {
@@ -152,7 +152,7 @@
                                 
             NP.productId = needleParam.productId;
                                 
-        }(needleParam);
+        }(needleParam));
 
             
             
@@ -268,4 +268,4 @@
         console.log('Needle ==> ', JSON.stringify(Needle));
     
 
-//}();
+}();
