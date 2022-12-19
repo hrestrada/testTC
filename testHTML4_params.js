@@ -3,7 +3,8 @@
     
     //CDWneedleParam.txt
         var needleParam = needleParam || {};
-        try {
+        (function(NP) {
+     /*   try {
             (function(id, loader) {
                 console.log('needleParam 1 ==> ');
                 var u = utag.o[loader].sender[id] = {};
@@ -14,7 +15,7 @@
                 u.extend = [function(a, b) {
                     console.log('needleParam 2 ==> ');
                     try {
-                        if (1) {
+                        if (1) { */
                             console.log('needleParam 3 ==> ');
                             window.needleParam = window.needleParam || {};
                             needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
@@ -24,7 +25,7 @@
                             needleParam.inviteContext = cdwTagManagementData.product_category;
                             if (cdwTagManagementData.page_type.toLowerCase().indexOf("product_") > -1 && location.pathname.indexOf('compare') < 0) {
                                 needleParam.setBrand = cdwTagManagementData.product_root_brand_name ? cdwTagManagementData.product_root_brand_name : "";
-                            }
+                            //}
                             if (JSON.parse(localStorage._act_p) !== null) {
                                 needleParam.CustomerSeq = (JSON.parse(localStorage._act_p).CustomerSeq !== undefined) ? JSON.parse(localStorage._act_p).CustomerSeq : "";
                                 needleParam.EAccountUserEmailAddressSeq = (JSON.parse(localStorage._act_p).EAccountUserEmailAddressSeq !== undefined) ? JSON.parse(localStorage._act_p).EAccountUserEmailAddressSeq : "";
@@ -75,8 +76,8 @@
                             if (b['page_type'] == 'SEARCH_BROWSE') {
                                 needleParam.productId = "";
                             }
-                        }
-                    } catch (e) {
+                      //  }
+                   /* } catch (e) {
                         utag.DB(e)
                     }
                 }
@@ -147,8 +148,14 @@
                 utag.o[loader].loader.LOAD(id);
             }
             )('298', 'cdw.main');
-        } catch (e) {}
+        } catch (e) {} */
+                                
+            NP.needleParam.productId = productId;
+                                
+        }(needleParam));
 
+            
+            
         //cdwMKTnumbInvite.txt
         var Needle = Needle || {};
         (function(N) {
