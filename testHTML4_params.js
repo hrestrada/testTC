@@ -152,7 +152,7 @@
                                 
             NP.productId = needleParam.productId;
                                 
-        }(needleParam));
+        }(needleParam);
 
             
             
