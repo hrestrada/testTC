@@ -254,8 +254,8 @@
         
         }(Needle));
 
-        console.log('needleParam', needleParam);
-        console.log('Needle', Needle);
+        console.log('needleParam ==> ', JSON.stringify(needleParam));
+        console.log('Needle ==> ', JSON.stringify(Needle));
     
 
 //}();
