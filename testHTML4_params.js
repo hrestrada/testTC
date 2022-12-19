@@ -2,7 +2,7 @@
 
     
     //CDWneedleParam.txt
-        var needleParam = needleParam || {};
+        var needleParam = needleParam || (function () {});
         (function(NP) {
      /*   try {
             (function(id, loader) {
