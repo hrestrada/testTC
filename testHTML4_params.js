@@ -5,14 +5,17 @@
         var needleParam = needleParam || {};
         try {
             (function(id, loader) {
+                console.log('needleParam 1 ==> ');
                 var u = utag.o[loader].sender[id] = {};
                 u.ev = {
                     'view': 1
                 };
                 u.map = {};
                 u.extend = [function(a, b) {
+                    console.log('needleParam 2 ==> ');
                     try {
                         if (1) {
+                            console.log('needleParam 3 ==> ');
                             window.needleParam = window.needleParam || {};
                             needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
                             needleParam.productId = '1148029' //cdwTagManagementData.product_id;
