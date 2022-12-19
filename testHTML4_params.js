@@ -255,9 +255,6 @@
         }(Needle));
 
         console.log('needleParam', needleParam);
-        for(let record of needleParam){ 
-          console.log(record[0] + "np: ")
-        }
         console.log('Needle', Needle);
     
 
