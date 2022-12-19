@@ -150,7 +150,7 @@
             )('298', 'cdw.main');
         } catch (e) {} */
                                 
-            NP.needleParam.productId = productId;
+            NP.productId = needleParam.productId;
                                 
         }(needleParam));
 
