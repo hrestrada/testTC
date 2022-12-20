@@ -7,15 +7,15 @@
 
                             console.log('needleParam 3 ==> ');
 
-                            window.needleParam = window.needleParam || {};
-                            needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
+                            //window.needleParam = window.needleParam || {};
+                            //needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
                             needleParam.productId = '1148029'; //cdwTagManagementData.product_id;
-                            needleParam.categoryId = cdwTagManagementData.webclasscode_level1name + '|' + cdwTagManagementData.webclasscode_level2name + '|' + (cdwTagManagementData.webclasscode_level3name ? cdwTagManagementData.webclasscode_level3name : "N/A");
+                            //needleParam.categoryId = cdwTagManagementData.webclasscode_level1name + '|' + cdwTagManagementData.webclasscode_level2name + '|' + (cdwTagManagementData.webclasscode_level3name ? cdwTagManagementData.webclasscode_level3name : "N/A");
                             needleParam.productPrice = '99.01'; //cdwTagManagementData.product_price;
-                            needleParam.inviteContext = cdwTagManagementData.product_category;
-                            if (cdwTagManagementData.page_type.toLowerCase().indexOf("product_") > -1 && location.pathname.indexOf('compare') < 0) {
-                                needleParam.setBrand = cdwTagManagementData.product_root_brand_name ? cdwTagManagementData.product_root_brand_name : "";
-                            }
+                            //needleParam.inviteContext = cdwTagManagementData.product_category;
+                            //if (cdwTagManagementData.page_type.toLowerCase().indexOf("product_") > -1 && location.pathname.indexOf('compare') < 0) {
+                            //    needleParam.setBrand = cdwTagManagementData.product_root_brand_name ? cdwTagManagementData.product_root_brand_name : "";
+                            //}
             /*
                             if (JSON.parse(localStorage._act_p) !== null) {
                                 needleParam.CustomerSeq = (JSON.parse(localStorage._act_p).CustomerSeq !== undefined) ? JSON.parse(localStorage._act_p).CustomerSeq : "";
@@ -75,7 +75,7 @@
             
             
         //cdwMKTnumbInvite.txt
-/*        var Needle = Needle || {};
+        var Needle = Needle || {};
         (function(N) {
   
           var mktNum = "MKT52869wadu52481P26482";
@@ -188,6 +188,6 @@
             NP.productId = needleParam.productId;
 
                                 
-        }(needleParam)); */
+        }(needleParam));
         console.log('needleParam ==> ', JSON.stringify(needleParam));
 //}();
