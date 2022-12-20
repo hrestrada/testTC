@@ -3,8 +3,8 @@
     
     //CDWneedleParam.txt
 
-        var needleParam = needleParam || {};
-        (function(NP) {
+        var needleParam = needleParam || (function(NP) {
+        //(function(NP) {
      /*   try {
             (function(id, loader) {
                 console.log('needleParam 1 ==> ');
@@ -151,9 +151,9 @@
             )('298', 'cdw.main');
         } catch (e) {} */
                                 
-            NP.productId = needleParam.productId;
+            //NP.productId = needleParam.productId;
                                 
-        }(needleParam));
+       // }(needleParam));
 
             
             
@@ -265,8 +265,12 @@
         
         }(Needle));
 
-        console.log('needleParam ==> ', JSON.stringify(needleParam));
+
         console.log('Needle ==> ', JSON.stringify(Needle));
     
+            NP.productId = needleParam.productId;
 
+                                
+        }(needleParam));
+        console.log('needleParam ==> ', JSON.stringify(needleParam));
 //}();
