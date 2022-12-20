@@ -14,7 +14,7 @@
                             //if (cdwTagManagementData.page_type.toLowerCase().indexOf("product_") > -1 && location.pathname.indexOf('compare') < 0) {
                             //    needleParam.setBrand = cdwTagManagementData.product_root_brand_name ? cdwTagManagementData.product_root_brand_name : "";
                             //}
-
+                      /*
                             if (JSON.parse(localStorage._act_p) !== null) {
                                 needleParam.CustomerSeq = (JSON.parse(localStorage._act_p).CustomerSeq !== undefined) ? JSON.parse(localStorage._act_p).CustomerSeq : "";
                                 needleParam.EAccountUserEmailAddressSeq = (JSON.parse(localStorage._act_p).EAccountUserEmailAddressSeq !== undefined) ? JSON.parse(localStorage._act_p).EAccountUserEmailAddressSeq : "";
@@ -29,7 +29,7 @@
                                 needleParam.MarketingEntitySegmentLevel3Description = (JSON.parse(localStorage._act_p).MarketingEntitySegmentLevel3Description !== undefined) ? JSON.parse(localStorage._act_p).MarketingEntitySegmentLevel3Description : "";
                                 needleParam.MarketingEntitySegmentLevel2Description = (JSON.parse(localStorage._act_p).MarketingEntitySegmentLevel2Description !== undefined) ? JSON.parse(localStorage._act_p).MarketingEntitySegmentLevel2Description : "";
                             }
-                      /*
+
                             if (location.pathname.indexOf('/content/brands/') > -1 || location.pathname.indexOf('/content/cdw/en/brand/') > -1) {
                                 needleParam.setBrand = location.pathname.match(/(!?brands\/)(.*)\//i) !== null ? location.pathname.match(/(!?brands\/)(.*)\//i)[2] : location.pathname.match(/en\/brand\/(.*)(.html)/) !== null ? location.pathname.match(/en\/brand\/(.*)(.html)/)[1] : '';
                             } 
