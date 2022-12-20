@@ -6,7 +6,7 @@
         var needleParam = needleParam || (function(NP) {
 
                             console.log('needleParam 3 ==> ');
-            /*
+
                             window.needleParam = window.needleParam || {};
                             needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
                             needleParam.productId = '1148029' //cdwTagManagementData.product_id;
@@ -15,7 +15,7 @@
                             needleParam.inviteContext = cdwTagManagementData.product_category;
                             if (cdwTagManagementData.page_type.toLowerCase().indexOf("product_") > -1 && location.pathname.indexOf('compare') < 0) {
                                 needleParam.setBrand = cdwTagManagementData.product_root_brand_name ? cdwTagManagementData.product_root_brand_name : "";
-
+            /*
                             if (JSON.parse(localStorage._act_p) !== null) {
                                 needleParam.CustomerSeq = (JSON.parse(localStorage._act_p).CustomerSeq !== undefined) ? JSON.parse(localStorage._act_p).CustomerSeq : "";
                                 needleParam.EAccountUserEmailAddressSeq = (JSON.parse(localStorage._act_p).EAccountUserEmailAddressSeq !== undefined) ? JSON.parse(localStorage._act_p).EAccountUserEmailAddressSeq : "";
@@ -66,8 +66,8 @@
                             if (b['page_type'] == 'SEARCH_BROWSE') {
                                 needleParam.productId = "";
                             }
-                                
-            NP.productId = needleParam.productId; */
+                                */
+            NP.productId = needleParam.productId; 
                                 
         }(needleParam));
 
