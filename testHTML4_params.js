@@ -67,10 +67,10 @@
                             if (b['page_type'] == 'SEARCH_BROWSE') {
                                 needleParam.productId = "";
                             }
-                                */
+                                
             NP.productId = needleParam.productId; 
                                 
-        }(needleParam));
+        }(needleParam)); */
 
             
             
