@@ -1,6 +1,4 @@
-//var SFChatParamJS = SFChatParamJS || (function () {
-
-    
+  
     //CDWneedleParam.txt
         var needleParam = needleParam || {};
         (function(NP) {
@@ -185,9 +183,8 @@
 
         console.log('Needle ==> ', JSON.stringify(Needle));
     
-            NP.productId = needleParam.productId;
+            //NP.productId = needleParam.productId;
 
                                 
         }(needleParam));
         console.log('needleParam ==> ', JSON.stringify(needleParam));
-//}();
