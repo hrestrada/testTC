@@ -4,19 +4,7 @@
     //CDWneedleParam.txt
 
         var needleParam = needleParam || (function(NP) {
-        //(function(NP) {
-     /*   try {
-            (function(id, loader) {
-                console.log('needleParam 1 ==> ');
-                var u = utag.o[loader].sender[id] = {};
-                u.ev = {
-                    'view': 1
-                };
-                u.map = {};
-                u.extend = [function(a, b) {
-                    console.log('needleParam 2 ==> ');
-                    try {
-                        if (1) { */
+
                             console.log('needleParam 3 ==> ');
                             window.needleParam = window.needleParam || {};
                             needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
@@ -26,7 +14,7 @@
                             needleParam.inviteContext = cdwTagManagementData.product_category;
                             if (cdwTagManagementData.page_type.toLowerCase().indexOf("product_") > -1 && location.pathname.indexOf('compare') < 0) {
                                 needleParam.setBrand = cdwTagManagementData.product_root_brand_name ? cdwTagManagementData.product_root_brand_name : "";
-                            //}
+
                             if (JSON.parse(localStorage._act_p) !== null) {
                                 needleParam.CustomerSeq = (JSON.parse(localStorage._act_p).CustomerSeq !== undefined) ? JSON.parse(localStorage._act_p).CustomerSeq : "";
                                 needleParam.EAccountUserEmailAddressSeq = (JSON.parse(localStorage._act_p).EAccountUserEmailAddressSeq !== undefined) ? JSON.parse(localStorage._act_p).EAccountUserEmailAddressSeq : "";
@@ -77,88 +65,15 @@
                             if (b['page_type'] == 'SEARCH_BROWSE') {
                                 needleParam.productId = "";
                             }
-                      //  }
-                   /* } catch (e) {
-                        utag.DB(e)
-                    }
-                }
-                ];
-                u.send = function(a, b) {
-                    if (u.ev[a] || typeof u.ev.all != "undefined") {
-                        var c, d, e, f;
-                        u.data = {
-                            "partnerId": "cdw"
-                        };
-                        for (c = 0; c < u.extend.length; c++) {
-                            try {
-                                d = u.extend[c](a, b);
-                                if (d == false)
-                                    return
-                            } catch (e) {}
-                        }
-                        ;c = [];
-                        for (d in utag.loader.GV(u.map)) {
-                            if (typeof b[d] != "undefined" && b[d] != "") {
-                                e = u.map[d].split(",");
-                                for (f = 0; f < e.length; f++) {
-                                    u.data[e[f]] = b[d];
-                                }
-                            }
-                        }
-                        u.data.categoryId = u.data.categoryId || (typeof b._ccat != "undefined" ? b._ccat.slice(0) : []);
-                        u.data.productId = u.data.productId || (typeof b._cprod != "undefined" ? b._cprod.slice(0) : []);
-                        u.data.productQuan = u.data.productQuan || (typeof b._cquan != "undefined" ? b._cquan.slice(0) : []);
-                        u.data.productPrice = u.data.productPrice || (typeof b._cprice != "undefined" ? b._cprice.slice(0) : []);
-                        u.data.orderId = u.data.orderId || b._corder || "";
-                        u.data.currencyCode = u.data.currencyCode || b._ccurrency || "";
-                        if (u.data.orderId != "") {
-                            u.data.events = u.data.events || "purchase";
-                            window.needleParam.events = u.data.events;
-                            if (u.data.currencyCode != "") {
-                                window.needleParam.currencyCode = u.data.currencyCode;
-                            }
-                            window.needleParam.orderId = u.data.orderId;
-                            u.data.orderItems = [];
-                            for (var i = 0; i < u.data.productId.length; i++) {
-                                var item = [];
-                                item.push(u.data.productId[i], u.data.productQuan[i] || "1", u.data.productPrice[i] || "1");
-                                item = item.join(":");
-                                u.data.orderItems.push(item);
-                            }
-                            u.data.orderItems = u.data.orderItems.join(",");
-                            window.needleParam.orderItems = u.data.orderItems;
-                        } else {
-                            if ((typeof window.needleParam !== 'undefined' && typeof window.needleParam.categoryId === 'undefined') || (typeof window.needleParam !== "undefined" && typeof window.needleParam.categoryId !== "undefined" && window.needleParam.categoryId.length < 0)) {
-                                window.needleParam.categoryId = u.data.categoryId.join(",");
-                            }
-                            if ((typeof window.needleParam !== "undefined" && typeof window.needleParam.productId === "undefined") || (typeof window.needleParam !== "undefined" && typeof window.needleParam.productId !== "undefined" && window.needleParam.productId.length < 0)) {
-                                window.needleParam.productId = u.data.productId.join(",");
-                            }
-                            if (u.data.productPrice.length > 0) {
-                                window.needleParam.productPrice = u.data.productPrice.join(",");
-                            }
-                        }
-                        u.data.base_url = u.data.base_url || "//" + u.data.partnerId + "https://protect-us.mimecast.com/s/OkiaCpYj52TnR3v5t2KCQ5?domain=needle.com";
-                        u.s = document.getElementsByTagName("script")[0];
-                        u.scr = document.createElement("script");
-                        u.scr.type = "text/javascript";
-                        u.scr.src = u.data.base_url;
-                        u.s.parentNode.insertBefore(u.scr, u.s);
-                    }
-                }
-                utag.o[loader].loader.LOAD(id);
-            }
-            )('298', 'cdw.main');
-        } catch (e) {} */
                                 
-            //NP.productId = needleParam.productId;
+            NP.productId = needleParam.productId;
                                 
-       // }(needleParam));
+        }(needleParam));
 
             
             
         //cdwMKTnumbInvite.txt
-        var Needle = Needle || {};
+/*        var Needle = Needle || {};
         (function(N) {
   
           var mktNum = "MKT52869wadu52481P26482";
@@ -271,6 +186,6 @@
             NP.productId = needleParam.productId;
 
                                 
-        }(needleParam));
+        }(needleParam)); */
         console.log('needleParam ==> ', JSON.stringify(needleParam));
 //}();
