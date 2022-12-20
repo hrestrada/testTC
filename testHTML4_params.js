@@ -6,6 +6,7 @@
         var needleParam = needleParam || (function(NP) {
 
                             console.log('needleParam 3 ==> ');
+            /*
                             window.needleParam = window.needleParam || {};
                             needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
                             needleParam.productId = '1148029' //cdwTagManagementData.product_id;
@@ -66,7 +67,7 @@
                                 needleParam.productId = "";
                             }
                                 
-            NP.productId = needleParam.productId;
+            NP.productId = needleParam.productId; */
                                 
         }(needleParam));
 
