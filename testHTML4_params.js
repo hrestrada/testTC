@@ -2,8 +2,8 @@
 
     
     //CDWneedleParam.txt
-
-        var needleParam = needleParam || (function(NP) {
+        var needleParam = needleParam || {};
+        (function(NP) {
 
                             console.log('needleParam 3 ==> ');
 
