@@ -142,7 +142,17 @@
          
          
             
-
+            embedded_svc.settings.extraPrechatInfo = [{
+            "entityFieldMaps": [{
+              "doCreate":false,
+              "doFind":true,
+              "VisitorId__c": varVisitorID,
+              "isExactMatch":true,
+              "label":"Last Name"
+            }],
+            "entityName":"Contact",
+            "saveToTranscript": "Visitor_ID__c"
+          }];
             //embedded_svc.settings.storageDomain = 'yourdomain.com'; 
             //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
