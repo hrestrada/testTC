@@ -1,6 +1,7 @@
   
     //CDWneedleParam.txt
-        var needleParam = needleParam || (function(NP) {
+        var needleParam = needleParam || {};
+            (function(NP) {
 
                             //window.needleParam = window.needleParam || {};
                             //needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
