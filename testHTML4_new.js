@@ -14,7 +14,7 @@ var SFChatJS=SFChatJS||function(){
   
   function makeRequest1(){
     var params={fromUrl:varVisitorURL,userId:varVisitorID,globalParams:window.needleParam},options={method:"POST",body:JSON.stringify(params)};
-    console.log('PARAMS ==> ' + params);
+    console.log('PARAMS ==> ' + JSON.stringify(params));
     
     fetch(siteUrl+"/services/apexrest/TcChat/",options)
       .then(response=>response.json())
