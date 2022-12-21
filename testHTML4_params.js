@@ -3,7 +3,7 @@
         var needleParam = needleParam || {};
             (function(NP) {
 
-                            //window.needleParam = window.needleParam || {};
+                            window.needleParam = window.needleParam || {};
                             //needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
                             needleParam.productId = '1148029'; //cdwTagManagementData.product_id;
                             //needleParam.categoryId = cdwTagManagementData.webclasscode_level1name + '|' + cdwTagManagementData.webclasscode_level2name + '|' + (cdwTagManagementData.webclasscode_level3name ? cdwTagManagementData.webclasscode_level3name : "N/A");
