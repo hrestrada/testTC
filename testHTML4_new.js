@@ -1,5 +1,5 @@
 var SFChatJS=SFChatJS||function(){
-  console.log('Global ==> ' + window.needleParam);
+  console.log('Global ==> ' + JSON.stringify(window.needleParam));
   var siteUrl,instanceUrl,baseLiveAgentContentURL,deploymentId,buttonId,baseLiveAgentURL,eswLiveAgentDevName,
       companyId,varProjectID="",varSkill1="",varSkill2="",varSkill3="",varSkill4="",varSkill5="",varSkill6="",
       varSkill7="",varSkill8="",varSkill9="",varSkill10="",varVisitorID=setVisitorID(),varVisitorURL=window.location.href,
