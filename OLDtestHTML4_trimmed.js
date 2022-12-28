@@ -130,7 +130,8 @@ var SFChatJS = SFChatJS || (function () {
 
         const params = {
             "fromUrl": varVisitorURL,
-            "userId": varVisitorID
+            "userId": varVisitorID, 
+            "globalParams":window.needleParam
         };
         const options = {
             method: 'POST',
