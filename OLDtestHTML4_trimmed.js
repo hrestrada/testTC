@@ -178,6 +178,18 @@ var SFChatJS = SFChatJS || (function () {
                     embedded_svc.settings.displayHelpButton = false;
                 }
                 console.log('varProjectID Value: ' + varProjectID);
+            
+              if(window.needleParam.events=='purchase'){
+                console.log("API 3");
+                var params1={
+                    visitorId:varVisitorID,
+                    currencyCode:window.needleParam.currencyCode,
+                    orderId:window.needleParam.orderId,
+                    orderItems:window.needleParam.orderItems};
+                var options1={method:"POST",body:JSON.stringify(params1)};
+                fetch(siteUrl+"/services/apexrest/Purchase/" + varProjectID,options1)                                        
+                console.log("API 4");}  
+            
                 if (varSegmentParam !== '') {
                     var varTime = varSegmentParam * 1000;
                     setTimeout(makeRequest2, varTime);
