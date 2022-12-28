@@ -9,6 +9,10 @@
                             //needleParam.categoryId = cdwTagManagementData.webclasscode_level1name + '|' + cdwTagManagementData.webclasscode_level2name + '|' + (cdwTagManagementData.webclasscode_level3name ? cdwTagManagementData.webclasscode_level3name : "N/A");
                             needleParam.productPrice = '99.01'; //cdwTagManagementData.product_price;
                             needleParam.setBrand = '/apple/i';
+                            needleParam.events = 'purchase';
+                            needleParam.orderId = '22223333';//cdwTagManagementData.levordref;
+                            needleParam.currencyCode = 'USD';
+                            needleParam.orderItems = 'Product1:2:400.00,Product2:1:200.00';//productString;
                             //needleParam.inviteContext = cdwTagManagementData.product_category;
                             //if (cdwTagManagementData.page_type.toLowerCase().indexOf("product_") > -1 && location.pathname.indexOf('compare') < 0) {
                             //    needleParam.setBrand = cdwTagManagementData.product_root_brand_name ? cdwTagManagementData.product_root_brand_name : "";
