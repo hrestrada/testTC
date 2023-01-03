@@ -181,6 +181,7 @@ var SFChatJS = SFChatJS || (function () {
             
               if(window.needleParam.events=='purchase'){
                 console.log("API 3");
+                console.log("SITE URL ==> " + siteUrl + "/services/apexrest/Purchase/" + varProjectID);
                 var params1={
                     visitorId:varVisitorID,
                     currencyCode:window.needleParam.currencyCode,
