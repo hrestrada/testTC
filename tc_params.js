@@ -1,18 +1,18 @@
   
     //CDWneedleParam.txt
         var tcParam = tcParam || {};
-            (function(NP) {
+            (function(TCP) {
 
                             window.tcParam = window.tcParam || {};
                             //needleParam.ExternalNetwork = (cdwTagManagementData.extranet !== undefined) ? cdwTagManagementData.extranet : "Not Defined on this page";
-                            tc.productId = '1148029'; //cdwTagManagementData.product_id;
+                            tcParam.productId = '1148029'; //cdwTagManagementData.product_id;
                             //needleParam.categoryId = cdwTagManagementData.webclasscode_level1name + '|' + cdwTagManagementData.webclasscode_level2name + '|' + (cdwTagManagementData.webclasscode_level3name ? cdwTagManagementData.webclasscode_level3name : "N/A");
-                            tc.productPrice = '99.01'; //cdwTagManagementData.product_price;
-                            tc.setBrand = '/apple/i';
-                            tc.events = 'purchase';
-                            tc.orderId = '222233331';//cdwTagManagementData.levordref;
-                            tc.currencyCode = 'USD';
-                            tc.orderItems = 'Product1:2:400.00,Product2:1:200.00';//productString;
+                            tcParam.productPrice = '99.01'; //cdwTagManagementData.product_price;
+                            tcParam.setBrand = '/apple/i';
+                            tcParam.events = 'purchase';
+                            tcParam.orderId = '222233331';//cdwTagManagementData.levordref;
+                            tcParam.currencyCode = 'USD';
+                            tcParam.orderItems = 'Product1:2:400.00,Product2:1:200.00';//productString;
                             //needleParam.inviteContext = cdwTagManagementData.product_category;
                             //if (cdwTagManagementData.page_type.toLowerCase().indexOf("product_") > -1 && location.pathname.indexOf('compare') < 0) {
                             //    needleParam.setBrand = cdwTagManagementData.product_root_brand_name ? cdwTagManagementData.product_root_brand_name : "";
