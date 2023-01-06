@@ -1,8 +1,8 @@
 
-        var tcParam = tcParam || {};
-            (function(TCP) {
+        //var tcParam = tcParam || {};
+            //(function(TCP) {
 
-                            window.tcParam = window.tcParam || {};
+                            //window.tcParam = window.tcParam || {};
                             //tcParam.productId = '1148029'; //cdwTagManagementData.product_id;
                             //tcParam.productPrice = '99.01'; //cdwTagManagementData.product_price;
                             //tcParam.setBrand = '/apple/i';
@@ -12,5 +12,5 @@
                             //tcParam.orderItems = 'Product1:2:400.00,Product2:1:200.00';//productString;
                             
                                 
-        }(tcParam));
-        console.log('tcParam ==> ', JSON.stringify(tcParam));
+        //}(tcParam));
+        //console.log('tcParam ==> ', JSON.stringify(tcParam));
