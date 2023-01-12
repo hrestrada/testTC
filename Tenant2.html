@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Sample HTML Code - NewsLetter Form</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 3rem 0;
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      color: white;
+      background-color: #0000FF;
+    }
+
+    main {
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      padding: 1rem;
+      font-size: 1.75rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- intro section -->
+    <section class="intro">
+      <h1 class="title">Chat Test Page multitenant</h1>
+      <p>Testing site for chat Tenant2  external site</p>      
+    </section>
+  </main>
+
+  <!-- ///// START BUTTON CODE ///// -->
+
+  <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+  <script type="text/javascript" src="tc_params.js"></script>
+  <script type="text/javascript" src="tc_trimmed.min.js"></script>
+  <script type="text/javascript">
+    window.onload = function (e) {
+      SFChatJS.init({
+        siteUrl: "https://thirdchannel2022--appsuat.sandbox.my.site.com",
+        instanceUrl: "https://thirdchannel2022--appsuat.sandbox.my.salesforce.com",
+        baseLiveAgentContentURL: 'https://c.la4-c1cs-ia4.salesforceliveagent.com/content',
+        deploymentId: '5728I0000004CIU',
+        buttonId: '5738I0000004CJK',
+        baseLiveAgentURL: 'https://d.la4-c1cs-ia4.salesforceliveagent.com/chat',
+        eswLiveAgentDevName: 'Tenant2EmbSer',
+        companyId: "00D8I0000008gOM"
+      });
+      SFChatJS.start();
+    }
+  </script>
+
+  <!-- ///// END BUTTON CODE ///// -->
+</body>
+</html>
