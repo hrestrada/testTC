@@ -10,7 +10,7 @@
                             tcParam.orderId = '222233331';//cdwTagManagementData.levordref;
                             tcParam.currencyCode = 'USD';
                             tcParam.orderItems = 'Product1:2:400.00,Product2:1:200.00';//productString;
-                            tcParam.programId = 'CDW1';
+                            //tcParam.programId = 'CDW1';
                             
                                 
         }(tcParam));
