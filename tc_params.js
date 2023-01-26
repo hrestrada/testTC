@@ -12,6 +12,9 @@
                             tcParam.orderItems = 'Product1:2:400.00,Product2:1:200.00';//productString;
                             tcParam.programId = 'CDW1';
                             
+                    //needleParam.categoryId = cdwTagManagementData.page_name;
+                    needleParam.categoryId = '';
+                    
                     
        var Needle = Needle || {};
         (function(N) {
