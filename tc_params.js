@@ -16,13 +16,12 @@
                     tcParam.categoryId = '/Amplified/i';
                     
                     
-       var mktNumbers = mktNumbers || {};
-        (function(N) {
+    
   
-          var mktNum = "MKT52869wadu52481P26482";
+          tcParam.mktNum = "MKT52869wadu52481P26482";
           
              if (tcParam.categoryId && tcParam.categoryId.match(/Amplified/i)) {
-             mktNum = "MKT59280wadu159267P00000";
+             tcParam.mktNum = "MKT59280wadu159267P00000";
            } //else if (needleParam.setBrand && needleParam.setBrand.match(/acer/i)) {
 //             mktNum = "MKT52869wadu52436P26437";
 //           } else if (needleParam.setBrand && needleParam.setBrand.match(/apc/i)) {
@@ -119,10 +118,8 @@
 //           mktNum = "MKT52869wadu52448P26449";
 //           }
 //          
-          N.mktNum = mktNum;
+//          N.mktNum = mktNum;
         
-        }(mktNumbers));
-        console.log('mktNumbers ==> ', JSON.stringify(mktNumbers));
                     
                     
                                 
