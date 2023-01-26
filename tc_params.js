@@ -16,7 +16,7 @@
                     tcParam.categoryId = '/Amplified/i';
                     
                     
-       var Needle = Needle || {};
+       var mktNumbers = mktNumbers || {};
         (function(N) {
   
           var mktNum = "MKT52869wadu52481P26482";
@@ -121,8 +121,8 @@
 //          
           N.mktNum = mktNum;
         
-        }(Needle));
-        console.log('Needle ==> ', JSON.stringify(Needle));
+        }(mktNumbers));
+        console.log('mktNumbers ==> ', JSON.stringify(mktNumbers));
                     
                     
                                 
