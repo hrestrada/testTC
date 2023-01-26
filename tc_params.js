@@ -118,7 +118,7 @@
 //           } else if ((needleParam.setBrand && needleParam.setBrand.match(/epson/i)) && (needleParam.categoryId && needleParam.categoryId.match(/printers/i))) {
 //           mktNum = "MKT52869wadu52448P26449";
 //           }
-          
+//          
           N.mktNum = mktNum;
         
         }(Needle));
