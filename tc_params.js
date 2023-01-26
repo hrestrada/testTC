@@ -13,7 +13,7 @@
                             tcParam.programId = 'CDW1';
                             
                     //needleParam.categoryId = cdwTagManagementData.page_name;
-                    tcParam.categoryId = '';
+                    tcParam.categoryId = '/Amplified/i';
                     
                     
        var Needle = Needle || {};
@@ -21,9 +21,9 @@
   
           var mktNum = "MKT52869wadu52481P26482";
           
-//           if (needleParam.categoryId && needleParam.categoryId.match(/Amplified/i)) {
-//             mktNum = "MKT59280wadu159267P00000";
-//           } else if (needleParam.setBrand && needleParam.setBrand.match(/acer/i)) {
+           if (tcParam.categoryId && tcParam.categoryId.match(/Amplified/i)) {
+             mktNum = "MKT59280wadu159267P00000";
+           } //else if (needleParam.setBrand && needleParam.setBrand.match(/acer/i)) {
 //             mktNum = "MKT52869wadu52436P26437";
 //           } else if (needleParam.setBrand && needleParam.setBrand.match(/apc/i)) {
 //             mktNum = "MKT52869wadu52437P26438";
