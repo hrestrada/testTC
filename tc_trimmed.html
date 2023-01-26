@@ -82,7 +82,34 @@
   </script>
 
   <!-- ///// END BUTTON CODE ///// -->
+<!-- Start of Invitations -->
+<div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
+	<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
+		<span class="embeddedServiceTitleText" id="snapins_titletext">Chat with an IT Pro</span>
+		<!-- <button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button> -->
+	</div>
+	<div class="embeddedServiceInvitationBody">
+        <button type="button" id="rejectInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
+        <div class="img"><img src="{!$Resource.LiveAgent}" width="150px" height="150px;"/></div>
+		<span id="snapins_bodytext">How can we help you?</span>
+	</div>
+	<div class="embeddedServiceInvitationFooter" aria-describedby="snapins_bodytext">
+		<!-- <button type="button" class="embeddedServiceActionButton" id="rejectInvite">X</button> -->
+		<button type="button" class="embeddedServiceActionButton" id="acceptInvite">Chat LIVE Now</button>
+	</div>
+</div>
 
+
+
+<script type='text/javascript'>
+	(function() {
+        //document.getElementById('closeInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };
+		document.getElementById('rejectInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }; // use this API call to reject invitations
+		document.getElementById('acceptInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.acceptInvite(); }; // use this API call to start chat from invitations
+		document.addEventListener('keyup', function(event) { if (event.keyCode == 27) { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }})
+	})();
+</script>
+<!-- End of Invitations -->
 
 
 
