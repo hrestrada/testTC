@@ -41,6 +41,172 @@
       font-size: 1.75rem;
     }
   </style>
+	
+	
+	    <style type='text/css'>
+	#snapins_invite { 
+        background-color: #FFFFFF; 
+        font-family: "Arial", sans-serif; overflow: visible; 
+        /* border-radius: 8px; */ visibility: hidden; }
+        
+	.embeddedServiceInvitation { 
+        background-color: transparent; 
+        /* max-width: 290px; */
+        /* max-height: 210px; */
+        max-width: unset !important;
+        max-height: unset !important;
+        -webkit-box-shadow: 0 7px 12px rgba(0,0,0,0.28); 
+        /*-moz-box-shadow: 0 7px 12px rgba(0,0,0,0.28); 
+        box-shadow: 0 7px 12px rgba(0,0,0,0.28); */
+        -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.28); 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.28);}
+        
+	@media only screen and (min-width: 48em) { 
+        /*mobile*/ 
+        .embeddedServiceInvitation { max-width: 332px; max-height: 210px; } }
+        
+	.embeddedServiceInvitation > .embeddedServiceInvitationHeader { 
+        width: inherit; 
+        height: 32px; 
+        line-height: 32px; 
+        /* padding: 10px; */
+        color: #FFFFFF; 
+        background-color: #222222; 
+        overflow: initial; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: stretch; 
+        /* border-top-left-radius: 8px; 
+        border-top-right-radius: 8px; */}
+        
+	.embeddedServiceInvitationHeader #embeddedServiceAvatar { 
+        width: 32px; 
+        height: 32px; 
+        border-radius: 50%; }
+	.embeddedServiceInvitationHeader .embeddedServiceTitleText { 
+        /* font-size: 18px; */
+        font-size: 13px; 
+        color: #FFFFFF; 
+        overflow: hidden; 
+        word-wrap: normal; 
+        white-space: nowrap; 
+        text-overflow: ellipsis; 
+        align-self: stretch; 
+        flex-grow: 1; 
+        max-width: 100%; 
+        margin: 0 12px; 
+        text-align: center;}
+        
+        /* .embeddedServiceInvitationHeader .embeddedServiceCloseIcon { */
+    .embeddedServiceInvitationBody .embeddedServiceCloseIcon { 
+        border: none; 
+        border-radius: 3px; 
+        cursor: pointer; 
+        position: relative; 
+        bottom: 3%; 
+        background-color: transparent; 
+        /* width: 32px; 
+        height: 32px; */
+        font-size: 23px; 
+        font-weight: lighter;
+        /* color: #FFFFFF; */
+        background: unset;
+        float: right;}
+        
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus { 
+        outline: none; }
+        
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus::before { 
+        content: " "; 
+        position: absolute; 
+        top: 11%; 
+        left: 7%; 
+        width: 85%; 
+        height: 85%; 
+        background-color: rgba(255, 255, 255, 0.2); 
+        border-radius: 4px; pointer-events: none; }
+        
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:active, .embeddedServiceCloseIcon:hover { 
+        background-color: #FFFFFF; 
+        color: rgba(0,0,0,0.7); 
+        opacity: 0.7; 
+        background: transparent;
+        /* color: #FFFFFF; */}
+        
+	.embeddedServiceInvitation > .embeddedServiceInvitationBody { 
+        background-color: #FFFFFF; 
+        /* max-height: 110px; 
+        min-width: 260px; */
+        max-height: unset !important;
+        min-width: unset !important;
+        margin: 0 8px; 
+        /* font-size: 14px; */ 
+        line-height: 25px; 
+        overflow: auto; 
+        text-align: center;}
+        
+	.embeddedServiceInvitationBody p { 
+        color: #333333; 
+        padding: 8px; 
+        margin: 12px 0; }
+        
+	.embeddedServiceInvitation > .embeddedServiceInvitationFooter { 
+        width: inherit; 
+        color: #FFFFFF; 
+        text-align: center; 
+        background-color: #FFFFFF; 
+        /* padding: 10px;  
+        max-height: 50px; 
+        border-bottom-left-radius: 8px; 
+        border-bottom-right-radius: 8px; */}
+        
+	.embeddedServiceInvitationFooter > .embeddedServiceActionButton { 
+        font-size: 12px; 
+        font-weight: normal;
+        max-height: 40px; 
+        border: none; 
+        border-radius: 0; 
+        padding: 4px 8px; 
+        margin: 4px; 
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        cursor: pointer; 
+        background: unset;}
+        
+	.embeddedServiceInvitationFooter > #acceptInvite { background-color: #d30000; color: #FFFFFF; }
+	.embeddedServiceInvitationFooter > #rejectInvite { background-color: #FFFFFF; color: #005290; }
+        
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+        
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+        
+        /* .embeddedServiceInvitation {
+        max-height: unset !important;
+        } */
+        
+        /* .embeddedServiceInvitation > .embeddedServiceInvitationBody {
+        max-height: unset !important;
+        min-width: unset !important;
+        } */
+        
+        /*.embeddedServiceInvitationHeader .embeddedServiceCloseIcon, .embeddedServiceInvitationHeader .embeddedServiceCloseIcon:hover {
+        background: transparent;
+        color: #FFFFFF;
+        }*/
+        
+        /*.embeddedServiceInvitationFooter > .embeddedServiceActionButton {
+        background: unset;
+        }*/
+        
+</style>
+	
+	
 </head>
 
 <body>
