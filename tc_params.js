@@ -16,7 +16,7 @@
                     tcParam.categoryId = '/Amplified/i';
                     
                     
-       var needle = needle || {};
+       var Needle = Needle || {};
         (function(N) {
   
           var mktNum = "MKT52869wadu52481P26482";
